@@ -39,13 +39,13 @@ jobs:
                     docker build . --tag gcr.io/$PROJECT_ID/nextapp:$GITHUB_SHA
                 - name: Push the image to the Google Container Registry (GCR)
                   run: |
-                    docker push gcr.io/$PROJECT_ID/$REPO_NAME:$GITHUB_SHA
+                    docker push gcr.io/$PROJECT_ID/nextapp:$GITHUB_SHA
 
                 - name: Deploy
                   run: |
                     gcloud run deploy $REPO_NAME \
                     --region $REGION \
-                    --image gcr.io/$PROJECT_ID/$REPO_NAME:$GITHUB_SHA \
+                    --image gcr.io/$PROJECT_ID/nextapp:$GITHUB_SHA \
                     --platform "managed" \
                     --quiet
                 
