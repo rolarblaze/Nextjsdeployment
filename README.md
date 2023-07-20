@@ -1,5 +1,5 @@
 # Nextjsdeployment
-A deployment flow using Github Actions to deploy a NextJs application on Google Cloud Run
+A deployment flow using GitHub Actions to deploy a NextJs application on Google Cloud Run
 
 In this demonstration, we will walk through the process of building a Next.js app, containerizing it using Docker, and pushing the container to Google Container Registry. To automate the deployment, we will utilize GitHub Actions, streamlining the entire workflow and making the deployment process more efficient and consistent.
 
